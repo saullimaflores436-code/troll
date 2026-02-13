@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login troll</title>
+    <style>
+        body{
+            background-color: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        button{
+            background-color: black;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover{
+            background-color: #00ff00;
+            color: black;
+        }
+
+        img{
+            border: 2px solid #00ff00;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+<h2>Escribe exactamente:</h2>
+<h1>PONER INICIAR SESION</h1>
+
+<form action="/login" method="post">
+    <input type="text" name="nombre" required>
+    <br><br>
+    <button type="submit">Entrar</button>
+</form>
+
+<p style="color:red;" th:text="${error}"></p>
+
+</body>
+</html>
